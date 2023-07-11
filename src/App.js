@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import NewsCardContainer from './components/NewsCardContainer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <details className='details-container news-details'>
+        <summary className='summary-container news-summary'>
+        <h4 className='summary__header'>news</h4>
+        </summary>
+        <NewsCardContainer />
+      </details>
+      <details className='details-container news-details'>
+        <summary className='summary-container news-summary'>
+        <h4 className='summary__header'>music</h4>
+        </summary>
+      </details>
+      <details className='details-container news-details'>
+        <summary className='summary-container news-summary'>
+        <h4 className='summary__header'>about</h4>
+        </summary>
+      </details>
+      <details className='details-container news-details'>
+        <summary className='summary-container news-summary'>
+        <h4 className='summary__header'>contact</h4>
+        </summary>
+      </details>
+      
     </div>
   );
 }

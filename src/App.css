@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: mainFont;
+  src: url('../src/assets/fonts/Roboto/Roboto-Regular.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: boldFont;
+  src: url('../src/assets/fonts/Roboto/Roboto-Bold.ttf');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,h2,h3,h4,h5,p {
+  font-family: mainFont;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-container {
+  min-width: 100vw;
+  max-width: 80px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  text-decoration: none;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar__links-list {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.navbar-container > * {
+  flex: 1
+}
+
+.navbar__header {
+  margin-left: 4rem;
+  color: #67A8F0;
+}
+
+.newscardcontainer-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.navbar__img {
+  max-height: 100px;
+}
+
+.newscard-container {
+  max-width: 300px;
+}
+
+.newscard-container
+
+.newscard__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border: solid black 0.5px;
+}
+
+.newscard__description, .newscard__header, .newscard__date {
+  padding: 0 1rem;
+}
+
+.newscard__date {
+  font-family: boldFont;
+}
+
+details > div {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+summary {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  transition: 1000ms
+}
+
+details[open] > summary {
+  background-color: #67a7f01c;
+  border-bottom: solid black 0.5px;
+}
+
+details[open] {
+  border-bottom: solid black 0.5px;
+  border-top: solid black 0.5px;
+}
+
+.summary__header {
+  margin-left: 4rem;
 }
