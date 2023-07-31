@@ -1,33 +1,69 @@
 import './App.css';
+import { AudioListContainer } from './components/AudioListContainer';
 import Navbar from './components/Navbar';
+import { AboutContainer } from './components/AboutContainer';
 import NewsCardContainer from './components/NewsCardContainer';
+import ContactContainer from './components/ContactContainer';
+
+
+const pages = [
+  {
+    title: "news",
+    component: <NewsCardContainer />,
+  },
+  {
+    title: "music",
+    component: <AudioListContainer />,
+  },
+  {
+    title: "about",
+    component: <AboutContainer />,
+  },
+  {
+    title: "contact",
+    component: <ContactContainer />,
+  },
+]
+
+
+function PageSection({ pageInfo, playing }) {
+  return (
+    <details 
+    id={`${pageInfo.title}-details`}
+    className={`details-container ${pageInfo.title}-details`}
+    >
+      <summary 
+      className={`summary-container ${pageInfo.title}-summary`}
+      onClick={() => {
+        const els = document.getElementsByClassName("details-container")
+        const elsKeys = Object.keys(els)
+        elsKeys.forEach((key) => {
+          if (els[key].id !== `${pageInfo.title}-details`){
+            els[key].open = false
+          }
+        })
+      }}
+      >
+        <h4 className='summary__header'>{pageInfo.title}</h4>
+      </summary>
+        {pageInfo.component}
+    </details>
+  )
+}
 
 function App() {
+
   return (
     <div className="App">
+
       <Navbar />
-      <details className='details-container news-details'>
-        <summary className='summary-container news-summary'>
-        <h4 className='summary__header'>news</h4>
-        </summary>
-        <NewsCardContainer />
-      </details>
-      <details className='details-container news-details'>
-        <summary className='summary-container news-summary'>
-        <h4 className='summary__header'>music</h4>
-        </summary>
-      </details>
-      <details className='details-container news-details'>
-        <summary className='summary-container news-summary'>
-        <h4 className='summary__header'>about</h4>
-        </summary>
-      </details>
-      <details className='details-container news-details'>
-        <summary className='summary-container news-summary'>
-        <h4 className='summary__header'>contact</h4>
-        </summary>
-      </details>
-      
+      <div className='sections-container'>
+        {pages.map((page) => {
+          return (
+            <PageSection pageInfo={page} />
+          )
+        })}
+      </div>
     </div>
   );
 }
