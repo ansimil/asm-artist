@@ -217,11 +217,9 @@ details[open] {
 
 .summary__header {
   margin-left: 6rem;
-}
-
-.summary__header {
   cursor: pointer;
 }
+
 
 a {
   text-decoration: none;
@@ -417,5 +415,11 @@ a {
   }
   details summary::-webkit-details-marker {
     display:none;
+  }
+  .navbar__header {
+    color: black;
+  }
+  .summary__header {
+    font-weight: 400;
   }
 }
