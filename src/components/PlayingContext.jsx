@@ -59,7 +59,7 @@ function Playing(props) {
                 }
             }
         }
-        
+        // eslint-disable-next-line
       }, [isPlaying]);
     
     return (
