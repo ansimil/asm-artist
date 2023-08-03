@@ -6,7 +6,7 @@ import play from '../assets/images/play-icon.png'
 import pause from '../assets/images/pause-icon.png'
 
 const AudioPlayer = () => {
-    const { isPlaying, setIsPlaying, setPlayCount, playCount, currentSong, previousSong, audioPlayer, setPreviousSong, navbarClick, setNavbarClick } = useContext(PlayingContext)
+    const { isPlaying, setIsPlaying, setPlayCount, playCount, currentSong, previousSong, audioPlayer, setPreviousSong, setNavbarClick } = useContext(PlayingContext)
     return (
         <div className='list__audio-player'>
                 <div className="list__play-icon-container">

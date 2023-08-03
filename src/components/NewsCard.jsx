@@ -9,7 +9,10 @@ const NewsCard = ({ article }) => {
     }}
     onMouseLeave={() => {
         setHovered(false)
-    }}    
+    }} 
+    onTouchStart={()=>{
+        setHovered(!hovered)
+    }}   
     >
         {!hovered && <img 
         className="newscard__img" 

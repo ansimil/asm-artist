@@ -377,3 +377,42 @@ a {
   justify-content: center;
   margin-top: 3rem;
 }
+
+@media screen and (max-width: 400px) {
+  .navbar__links {
+    display: none
+  }
+  .navbar__header {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .navbar__header-container {
+    flex: none
+  }
+  .summary__header {
+    margin-left: 0
+  }
+  .summary-container {
+    justify-content: center;
+  }
+  .newscardcontainer-container {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
+  /* .newscard__img {
+    display: none;
+  } */
+  .about-info {
+    width: 80%;
+    padding-bottom: 2rem;
+  }
+  .about-activities {
+    flex-direction: column;
+  }
+  .about__concerts, .about__publications {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
