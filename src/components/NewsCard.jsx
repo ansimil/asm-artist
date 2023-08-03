@@ -10,7 +10,7 @@ const NewsCard = ({ article }) => {
     onMouseLeave={() => {
         setHovered(false)
     }} 
-    onTouchStart={()=>{
+    onTouchEnd={()=>{
         setHovered(!hovered)
     }}   
     >
