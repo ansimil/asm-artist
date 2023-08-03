@@ -415,4 +415,7 @@ a {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+  details summary::-webkit-details-marker {
+    display:none;
+  }
 }
