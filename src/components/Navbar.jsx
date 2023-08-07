@@ -21,7 +21,6 @@ const Navbar = () => {
     }
 
     useEffect(()=>{
-        console.log(progress);
         setTime(progressCalc(progress))
     },[progress])
 

@@ -192,7 +192,7 @@ details > div {
   margin-bottom: 3rem;
 }
 
-summary {
+.summary-container {
   height: 80px;
   display: flex;
   align-items: center;
@@ -200,19 +200,41 @@ summary {
   cursor: pointer;
 }
 
-summary:hover {
+.mobile-summary-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transition: 500ms;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.mobile-summary__header {
+  margin-left: 2rem;
+}
+
+.mobile-audio-list-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.summary-container:hover {
   color: #67A8F0;
 }
 
-details[open] > summary {
+.details-container[open] > .summary-container {
   background-color: #67a7f01c;
   border-bottom: solid black 0.5px;
   color: black
 }
 
-details[open] {
+.details-container[open] {
   border-bottom: solid black 0.5px;
   border-top: solid black 0.5px;
+}
+
+.mobile-details-container[open] .mobile-summary__header {
+    border-bottom: solid black 1px;
 }
 
 .summary__header {
