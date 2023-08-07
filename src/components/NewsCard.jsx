@@ -58,7 +58,7 @@ const NewsCard = ({ article }) => {
                                 target='blank'
                                 rel="noopener noreferrer"
                                 >
-                                Link
+                                Link Desktop
                                 </a>
                             }
                     </div>
