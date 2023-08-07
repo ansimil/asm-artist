@@ -36,9 +36,6 @@ const NewsCard = ({ article }) => {
             }}
             onMouseLeave={() => {
                 setHovered(false)
-            }} 
-            onTouchEnd={()=>{
-                setHovered(!hovered)
             }}   
             >
                 {!hovered && <img 
