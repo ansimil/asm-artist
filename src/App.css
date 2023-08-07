@@ -146,7 +146,7 @@ ul {
   max-height: 100px;
 }
 
-.newscard-container, .audio-container {
+.newscard-container, .audio-container, .mobile-newscard-container {
   min-width: 300px;
   max-width: 300px;
   /* box-shadow: 2px 2px 20px rgb(141, 141, 141); */
@@ -398,7 +398,16 @@ a {
   margin-top: 3rem;
 }
 
+@media screen and (min-width: 500px) {
+  .mobile-newscard-container {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 500px) {
+  .newscard-container {
+    display: none;
+  }
   .navbar__links {
     display: none
   }

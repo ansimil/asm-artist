@@ -3,7 +3,7 @@ import {isMobile} from 'react-device-detect';
 
 const MobileNewsCard = ({ article }) => {
     return (
-        <div className='newscard-container'>
+        <div className='mobile-newscard-container'>
             <div className='newscard__img'>
                 <h4 className="newscard__header newscard__element">{article.title}</h4>
                 <p className="newscard__date newscard__element">{article.date}</p>
@@ -58,7 +58,7 @@ const NewsCard = ({ article }) => {
                                 target='blank'
                                 rel="noopener noreferrer"
                                 >
-                                Link Desktop
+                                Link
                                 </a>
                             }
                     </div>
