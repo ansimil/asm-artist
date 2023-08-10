@@ -4,6 +4,7 @@ import { PlayingContext } from './PlayingContext'
 import { useContext } from 'react'
 import play from '../assets/images/play-icon.png'
 import pause from '../assets/images/pause-icon.png'
+import MobileAudioListContainer from './MobileAudioListContainer'
 
 
 const AudioPlayer = () => {
@@ -60,7 +61,7 @@ const AudioListContainer = () => {
     })
         return (
             <div className='audio-list-container'>
-            
+                <div className='audio-table-outer-container'>
                 <div className='audio-table-container'>
                     <table className='audio__table'>
                         <tbody>
@@ -89,6 +90,10 @@ const AudioListContainer = () => {
                     </table>
                 </div>
                 <AudioDetails />
+                </div>
+                <MobileAudioListContainer />
+                
+                
             </div>
           )
   
