@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {isMobile} from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 
 const MobileNewsCard = ({ article }) => {
     return (

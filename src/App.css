@@ -398,16 +398,22 @@ a {
   margin-top: 3rem;
 }
 
+.mobile-audio-list-container {
+  display: flex;
+}
+
 @media screen and (min-width: 500px) {
-  .mobile-newscard-container {
+  .mobile-audio-list-container {
     display: none;
   }
 }
 
+
 @media screen and (max-width: 500px) {
-  .newscard-container {
+  .audio-list-container {
     display: none;
   }
+
   .navbar__links {
     display: none
   }

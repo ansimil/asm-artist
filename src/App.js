@@ -26,7 +26,7 @@ const pages = [
 ]
 
 
-function PageSection({ pageInfo, playing }) {
+function PageSection({ pageInfo }) {
   return (
     <details 
     id={`${pageInfo.title}-details`}
