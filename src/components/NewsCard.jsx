@@ -27,7 +27,7 @@ const MobileNewsCard = ({ article }) => {
 
 const NewsCard = ({ article }) => {
     const [hovered, setHovered] = useState(false)
-    if (isMobile){
+    // if (isMobile){
         return (
             <div 
             className='newscard-container'
@@ -65,12 +65,12 @@ const NewsCard = ({ article }) => {
                 }
             </div>
           )
-    }
-    else {
-        return (
-            <MobileNewsCard article={article} />
-        )
-    }
+    // }
+    // else {
+    //     return (
+    //         <MobileNewsCard article={article} />
+    //     )
+    // }
   
 }
 
