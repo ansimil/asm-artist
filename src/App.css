@@ -78,6 +78,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background-color: white;
 }
 
 .navbar__audio-player__range-slider::-moz-range-thumb {
@@ -406,10 +407,25 @@ a {
   .mobile-audio-list-container {
     display: none;
   }
+  .mobile-footer-container {
+    display: none;
+  }
 }
 
 
 @media screen and (max-width: 500px) {
+  .mobile-footer-container {
+    width: 100dvw;
+    position: relative;
+    bottom: 0;
+    height: 100px;
+    border-top: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #67a7f01c;
+  }
+  
   .audio-table-outer-container {
     display: none;
   }

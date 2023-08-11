@@ -1,9 +1,10 @@
 import './App.css';
 import { AudioListContainer } from './components/AudioListContainer';
-import Navbar from './components/Navbar';
+import { Navbar } from './components/Navbar';
 import { AboutContainer } from './components/AboutContainer';
 import NewsCardContainer from './components/NewsCardContainer';
 import ContactContainer from './components/ContactContainer';
+import MobileFooter from './components/MobileFooter';
 
 
 const pages = [
@@ -64,6 +65,7 @@ function App() {
           )
         })}
       </div>
+      <MobileFooter/>
     </div>
   );
 }
