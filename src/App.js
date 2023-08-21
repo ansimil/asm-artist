@@ -4,9 +4,7 @@ import { Navbar } from './components/Navbar';
 import { AboutContainer } from './components/AboutContainer';
 import NewsCardContainer from './components/NewsCardContainer';
 import ContactContainer from './components/ContactContainer';
-import MobileFooter from './components/MobileFooter';
-import { useContext } from 'react'
-import { PlayingContext } from './components/PlayingContext';
+import MobileNavbar from './components/MobileNavbar';
 
 
 const pages = [
@@ -55,12 +53,13 @@ function PageSection({ pageInfo }) {
 }
 
 function App() {
-  const { playCount } = useContext(PlayingContext)
 
   return (
     <div className="App">
 
       <Navbar />
+      <MobileNavbar />
+
       <div className='sections-container'>
         {pages.map((page) => {
           return (
@@ -68,9 +67,7 @@ function App() {
           )
         })}
       </div>
-      {
-        playCount > 0 && <MobileFooter/>
-      }
+      
     </div>
   );
 }
